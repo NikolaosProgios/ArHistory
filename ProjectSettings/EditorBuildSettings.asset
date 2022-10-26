@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/WelcomeScene.unity
+    guid: 2b7e7743d79736d4a819fdb4253354bc
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 186a60090a9b9d74eafd768820055ef8
+  - enabled: 1
+    path: Assets/Scenes/Kef_1.unity
+    guid: 111bbf2dd29017f428402813d532eb61
+  m_configObjects: {}
