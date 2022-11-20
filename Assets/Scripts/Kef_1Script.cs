@@ -7,6 +7,12 @@ using UnityEngine.UI;
 
 public class Kef_1Script : MonoBehaviour
 {
+    public TMP_Text TableQuestion;
+    public TMP_Text Answer1Text;
+    public TMP_Text Answer2Text;
+    public TMP_Text Answer3Text;
+    int score;
+    int i, k, j;
 
     string[] Questions = {
         "Ποιες ομοιότητες παρατηρείτε ανάμεσα στην Αμερικανική "+
@@ -15,28 +21,41 @@ public class Kef_1Script : MonoBehaviour
                 "τα κείμενα των δύο πηγών; Τι πιστεύουμε σήμερα;" +
         "Ετσι με αρέσει"
     };
-    string[,] Answers = { { "1Anse1 ", "1Anse2 ", "1Anse3" }, 
+    string[,] Answers = { { "1Anse1 ", "1Anse2 ", "1Anse3" },
                           { "2Anse1 ", "2Anse2 ", "3Anse3" },
                           { "3Anse1 ", "3Anse2 ", "3Anse3" }
     };
 
-    public TMP_Text TableText;
-    public TMP_Text Answer1Text;
-    public TMP_Text Answer2Text;
-    public TMP_Text Answer3Text;
-
-    void Start(){
-
-        TableText.text = Questions[0].ToString();
-        Answer1Text.text = Answers[0, 0].ToString();
-        Answer2Text.text = Answers[0, 1].ToString();
-        Answer3Text.text = Answers[0, 2].ToString();
+    void Start()
+    {
+        i = 0; k = 0; j = 0;
+        TableQuestion.text = Questions[i++].ToString();
+        Answer1Text.text = Answers[k, j++].ToString();
+        Answer2Text.text = Answers[k, j++].ToString();
+        Answer3Text.text = Answers[k++, j++].ToString();
+        j = 0;
     }
-
-    void Update(){        
+    private bool LoadNextQ()
+    {
+        bool endKef = false;
+        if ((i < Questions.Length) & (k < Answers.Length))
+        {
+            TableQuestion.text = Questions[i++].ToString();
+            Answer1Text.text = Answers[k, j++].ToString();
+            Answer2Text.text = Answers[k, j++].ToString();
+            Answer3Text.text = Answers[k++, j++].ToString(); j = 0;
+        }
+        else
+        {
+            endKef = true;
+        }
+        return endKef;
     }
+    void Update() { }
 
-    public void Piso(){
+
+    public void Piso()
+    {
         SceneManager.LoadScene("MenuScene");
     }
 }
