@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 public class Kef_1Script : MonoBehaviour
 {
+    public GameObject Kef_Welcome_Panel;
     public TMP_Text TableQuestion;
+    public GameObject LetsStart;
     public GameObject Answer1btn; public TMP_Text Answer1Text;
     public GameObject Answer2btn; public TMP_Text Answer2Text;
     public GameObject Answer3btn; public TMP_Text Answer3Text; 
@@ -27,23 +29,32 @@ public class Kef_1Script : MonoBehaviour
     };
 
     int[] correctAnswers = {1,2,2};
-
+    
+    public TMP_Text TitlePanel;    
+    public GameObject WelcomeImage;    public GameObject FinishedImage;
+    public GameObject StarKef1Game;    public GameObject EndKef1NextGame;
     void Start()
-    { Debug.Log("Start()");
-        
-        TableQuestion.text = Questions[line++].ToString();
-        Answer1Text.text = Choices[row, column++].ToString();
-        Answer2Text.text = Choices[row, column++].ToString();
-        Answer3Text.text = Choices[row++, column].ToString(); column = 0;
+    {
+        ShowHideWelcomePanel();       
+        TitlePanel.text = "Καλωσήρθες στην 1η Ενότητα του παιχνιδού μας";
+        WelcomeImage.SetActive(true);
+        FinishedImage.SetActive(false);
+        StarKef1Game.SetActive(true);
+        EndKef1NextGame.SetActive(false);
     }
+    public void Startof()
+    {
+        ShowHideWelcomePanel();
+        LoadQnA();
+    }
+        
 
     public void PressedAnswer(int choice)
-    { Debug.Log("PressedAnswer()");
-
+    {
         if (choice == correctAnswers[--line]) {
             correctAnsw++; line++;
         }
-        if (LoadNextQnA())
+        if (LoadQnA())
         {
             TableQuestion.text = "Τέλος 1ης Ενότητας."
                 + "\nΣωστες Απαντήσεις:" + correctAnsw
@@ -51,27 +62,50 @@ public class Kef_1Script : MonoBehaviour
             Answer1btn.SetActive(false);
             Answer2btn.SetActive(false);
             Answer3btn.SetActive(false);
+            //Invoke for Delay
+            ShowHideWelcomePanel();
+            TitlePanel.text = "Ολοκλήρωσες 1η Ενότητα του παιχνιδού μας";
+            WelcomeImage.SetActive(false);
+            FinishedImage.SetActive(true);
+            StarKef1Game.SetActive(false);
+            EndKef1NextGame.SetActive(true);
+        }
+
+    }
+
+
+    public void Piso() {
+        SceneManager.LoadScene("MenuScene");
+    }
+    
+    public void OpenKefN(int n)
+    {
+        SceneManager.LoadScene("Kef_" + n);
+    }
+
+    private void ShowHideWelcomePanel()
+    {
+        if (Kef_Welcome_Panel != null)
+        {
+            bool isActive = Kef_Welcome_Panel.activeSelf;
+            Kef_Welcome_Panel.SetActive(!isActive);
         }
     }
 
-    private bool LoadNextQnA()
-    { Debug.Log("LoadNextQnA()");
-
+    private bool LoadQnA()
+    {
         bool endKef = false;
         if ((line < Questions.Length) & (row < Choices.Length))
         {
             TableQuestion.text = Questions[line++].ToString();
             Answer1Text.text = Choices[row, column++].ToString();
             Answer2Text.text = Choices[row, column++].ToString();
-            Answer3Text.text = Choices[row++, column].ToString(); column = 0;       
+            Answer3Text.text = Choices[row++, column].ToString(); column = 0;
         }
-        else {
+        else
+        {
             endKef = true;
         }
         return endKef;
-    }
-
-    public void Piso() {
-        SceneManager.LoadScene("MenuScene");
     }
 }
