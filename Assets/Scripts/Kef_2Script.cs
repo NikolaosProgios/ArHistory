@@ -59,7 +59,6 @@ public class Kef_2Script : MonoBehaviour
             StarKef2Game.SetActive(false);
             EndKef2NextGame.SetActive(true);
         }
-
     }
 
     public void Piso() { SceneManager.LoadScene("MenuScene"); }
