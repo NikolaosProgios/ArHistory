@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Kef_1Script : MonoBehaviour
 {
-    public GameObject Kef_Welcome_Panel;
+    public GameObject Welcome_Panel;
     public TMP_Text TableQuestion;
     public GameObject LetsStart;
     public GameObject Answer1btn; public TMP_Text Answer1Text;
@@ -33,6 +33,7 @@ public class Kef_1Script : MonoBehaviour
     public TMP_Text TitlePanel;    
     public GameObject WelcomeImage;    public GameObject FinishedImage;
     public GameObject StarKef1Game;    public GameObject EndKef1NextGame;
+
     void Start()
     {
         ShowHideWelcomePanel();       
@@ -46,8 +47,7 @@ public class Kef_1Script : MonoBehaviour
     {
         ShowHideWelcomePanel();
         LoadQnA();
-    }
-        
+    }       
 
     public void PressedAnswer(int choice)
     {
@@ -85,10 +85,10 @@ public class Kef_1Script : MonoBehaviour
 
     private void ShowHideWelcomePanel()
     {
-        if (Kef_Welcome_Panel != null)
+        if (Welcome_Panel != null)
         {
-            bool isActive = Kef_Welcome_Panel.activeSelf;
-            Kef_Welcome_Panel.SetActive(!isActive);
+            bool isActive = Welcome_Panel.activeSelf;
+            Welcome_Panel.SetActive(!isActive);
         }
     }
 
@@ -108,4 +108,15 @@ public class Kef_1Script : MonoBehaviour
         }
         return endKef;
     }
+
+    public Sprite[] images = new Sprite[2];
+    public Button button;
+    int thessis = 0;
+    public void ChangeButtonIkage()
+    {
+        
+      button.image.sprite = images[thessis++];
+        
+    }
+
 }
