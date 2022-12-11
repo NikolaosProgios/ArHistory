@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour{
 
-    public void OpenKefN(int n){
-        SceneManager.LoadScene("Kef_"+n);
-    }
-    public void Piso()    {
-        SceneManager.LoadScene("WelcomeScene");
-    }
+    private void OpenKefN(int n) => SceneManager.LoadScene("Kef_"+n);
+
+    private void Piso() => SceneManager.LoadScene("WelcomeScene");
 }

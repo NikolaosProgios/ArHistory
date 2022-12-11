@@ -60,10 +60,7 @@ public class Kef_2Script : MonoBehaviour
         }
     }
 
-    public void Piso()
-    {
-        SceneManager.LoadScene("MenuScene");
-    }
+    public void Piso() => SceneManager.LoadScene("MenuScene");
 
     public void OpenKefN(int n)
     {

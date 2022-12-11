@@ -5,20 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class WelcomeScript : MonoBehaviour{
     
-    public void LoadMenuScene(){
-        SceneManager.LoadScene("MenuScene");
-        Debug.Log("MenuScene");
-    }
-    public void ExitGame(){
-        Application.Quit();
-        Debug.Log("QUIT");
-    }
-   
-    public GameObject Panel;    
-    public void ShowMoreInfo(){       
-        if (Panel != null){
-            bool isActive = Panel.activeSelf;
-            Panel.SetActive(!isActive);            
+    private void LoadMenuScene() => SceneManager.LoadScene("MenuScene");
+
+    private void ExitGame() => Application.Quit();
+
+    public GameObject GuidePanel;    
+    private void ShowMoreInfo(){       
+        if (GuidePanel != null){
+            bool isActive = GuidePanel.activeSelf;
+            GuidePanel.SetActive(!isActive);            
         }       
     }
 }

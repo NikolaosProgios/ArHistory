@@ -274,7 +274,6 @@ GameObject:
   - component: {fileID: 187455904}
   - component: {fileID: 187455903}
   - component: {fileID: 187455902}
-  - component: {fileID: 187455905}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -347,7 +346,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 187455905}
+      - m_Target: {fileID: 617879051}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: Piso
         m_Mode: 1
@@ -397,18 +396,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187455900}
   m_CullTransparentMesh: 1
---- !u!114 &187455905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187455900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &495912657
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,8 +614,6 @@ GameObject:
   - component: {fileID: 571017048}
   - component: {fileID: 571017047}
   - component: {fileID: 571017046}
-  - component: {fileID: 571017049}
-  - component: {fileID: 571017050}
   m_Layer: 5
   m_Name: Kef_4_Button
   m_TagString: Untagged
@@ -727,7 +712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1059930061}
+      - m_Target: {fileID: 617879051}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: OpenKefN
         m_Mode: 3
@@ -747,30 +732,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571017044}
   m_CullTransparentMesh: 1
---- !u!114 &571017049
+--- !u!1 &617879050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617879052}
+  - component: {fileID: 617879051}
+  m_Layer: 0
+  m_Name: ScriptObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617879051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571017044}
+  m_GameObject: {fileID: 617879050}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &571017050
-MonoBehaviour:
+--- !u!4 &617879052
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571017044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_GameObject: {fileID: 617879050}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 371.33856, y: 1310.5887, z: -2.5525913}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &626827124
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,8 +926,6 @@ GameObject:
   - component: {fileID: 690761327}
   - component: {fileID: 690761326}
   - component: {fileID: 690761325}
-  - component: {fileID: 690761328}
-  - component: {fileID: 690761329}
   m_Layer: 5
   m_Name: Kef_5_Button
   m_TagString: Untagged
@@ -1021,7 +1024,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1059930061}
+      - m_Target: {fileID: 617879051}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: OpenKefN
         m_Mode: 3
@@ -1041,30 +1044,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690761323}
   m_CullTransparentMesh: 1
---- !u!114 &690761328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690761323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &690761329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690761323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &853358611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,8 +1056,6 @@ GameObject:
   - component: {fileID: 853358615}
   - component: {fileID: 853358614}
   - component: {fileID: 853358613}
-  - component: {fileID: 853358616}
-  - component: {fileID: 853358617}
   m_Layer: 5
   m_Name: Kef_3_Button
   m_TagString: Untagged
@@ -1177,7 +1154,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1059930061}
+      - m_Target: {fileID: 617879051}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: OpenKefN
         m_Mode: 3
@@ -1197,30 +1174,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853358611}
   m_CullTransparentMesh: 1
---- !u!114 &853358616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853358611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &853358617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853358611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &900572868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,7 +1324,6 @@ GameObject:
   - component: {fileID: 1059930056}
   - component: {fileID: 1059930060}
   - component: {fileID: 1059930059}
-  - component: {fileID: 1059930061}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1507,18 +1459,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059930054}
   m_CullTransparentMesh: 1
---- !u!114 &1059930061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059930054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1325731628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1470,6 @@ GameObject:
   - component: {fileID: 1325731629}
   - component: {fileID: 1325731633}
   - component: {fileID: 1325731632}
-  - component: {fileID: 1325731634}
   - component: {fileID: 1325731635}
   m_Layer: 5
   m_Name: Kef_2_Button
@@ -1603,7 +1542,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1059930061}
+      - m_Target: {fileID: 617879051}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: OpenKefN
         m_Mode: 3
@@ -1623,18 +1562,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325731628}
   m_CullTransparentMesh: 1
---- !u!114 &1325731634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325731628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1325731635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,7 +1600,6 @@ GameObject:
   - component: {fileID: 1619408442}
   - component: {fileID: 1619408445}
   - component: {fileID: 1619408444}
-  - component: {fileID: 1619408446}
   - component: {fileID: 1619408447}
   m_Layer: 5
   m_Name: Kef_1_Button
@@ -1746,7 +1672,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1059930061}
+      - m_Target: {fileID: 617879051}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: OpenKefN
         m_Mode: 3
@@ -1766,18 +1692,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619408441}
   m_CullTransparentMesh: 1
---- !u!114 &1619408446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619408441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1619408447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,7 +1965,6 @@ GameObject:
   - component: {fileID: 1745435072}
   - component: {fileID: 1745435071}
   - component: {fileID: 1745435076}
-  - component: {fileID: 1745435078}
   - component: {fileID: 1745435075}
   - component: {fileID: 1745435077}
   m_Layer: 5
@@ -2223,18 +2136,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1745435078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745435070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8dddbd504db4f47a6e17c7e3b8fac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1758903353
 GameObject:
   m_ObjectHideFlags: 0
