@@ -6,8 +6,8 @@ using TMPro;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class Kef_1Script : MonoBehaviour
-{
+public class Kef_1Script : MonoBehaviour{
+
     public GameObject Welcome_Panel, WelcomeImage, GoodByeΙmage,
             StarKef1Game, EndKef1NextGame;
     public TMP_Text TitlePanel;
@@ -16,7 +16,8 @@ public class Kef_1Script : MonoBehaviour
     public TMP_Text PanelQuestion,
             Answer1Text, Answer2Text, Answer3Text;
     public Button Answer1btn, Answer2btn, Answer3btn;
-    int line, row_txt, column, row_img, correctAnsw;
+
+    private int line, row_txt, column, row_img, correctAnsw;
 
     string[] Questions = {
         "Ποιες ομοιότητες παρατηρείτε ανάμεσα στην Αμερικανική "+
@@ -34,29 +35,12 @@ public class Kef_1Script : MonoBehaviour
 
     public void Start() => ShowHidePanel("Welcome");
 
+    public void Piso() => SceneManager.LoadScene("MenuScene");
+
     public void StartOf(){
         ShowHidePanel("Hide");
         LoadQnA();
     }
-
-    public async void PressedAnswer(int choice) {
-        if (choice == correctAnswers[--line]) {
-            correctAnsw++;           
-        } line++;
-        if (LoadQnA()) {
-            PanelQuestion.text = "Τέλος 1ης Ενότητας."
-                + "\nΣωστες Απαντήσεις: " + correctAnsw
-                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length-correctAnsw);
-            AnswersCanvas.SetActive(false);
-            await Task.Delay(3000);
-            ShowHidePanel("GoodBye");
-        }
-    }
-
-    public void Piso() => SceneManager.LoadScene("MenuScene");
-    
-    public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
-
     private void ShowHidePanel(string ComeOrBye) {
         if (Welcome_Panel != null) {
             bool isActive = Welcome_Panel.activeSelf;
@@ -76,6 +60,23 @@ public class Kef_1Script : MonoBehaviour
             EndKef1NextGame.SetActive(true);
         }
     }
+    public async void PressedAnswer(int choice) {
+        if (choice == correctAnswers[--line]) {
+            correctAnsw++;           
+        } line++;
+        if (LoadQnA()) {
+            PanelQuestion.text = "Τέλος 1ης Ενότητας."
+                + "\nΣωστες Απαντήσεις: " + correctAnsw
+                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length-correctAnsw);
+            AnswersCanvas.SetActive(false);
+            await Task.Delay(3000);
+            ShowHidePanel("GoodBye");
+        }
+    }   
+    
+    public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
+
+    
 
     public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
 
