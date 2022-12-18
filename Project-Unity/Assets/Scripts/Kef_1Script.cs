@@ -25,13 +25,12 @@ public class Kef_1Script : MonoBehaviour{
         "Ποια θεωρούνται τα σημαντικότερα ανθρώπινα δικαιώματα με βάση "+
                 "τα κείμενα των δύο πηγών; Τι πιστεύουμε σήμερα;" ,
         "Ερώτηση 3η",
-        "Photo Answers1","Photo Answers2","Photo Answers3",
     };
     string[,] Choices = { { "1Anse1 ", "1Anse2 ", "1Anse3" },
                           { "2Anse1 ", "2Anse2 ", "2Anse3" },
                           { "3Anse1 ", "3Anse2 ", "3Anse3" }
     };
-    int[] correctAnswers = {1,2,2,1,2,2};
+    int[] correctAnswers = {1,2,2,};
 
     public void Start() => ShowHidePanel("Welcome");
 
@@ -76,8 +75,6 @@ public class Kef_1Script : MonoBehaviour{
     
     public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
 
-    
-
     public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
 
     private bool LoadQnA() {
@@ -87,14 +84,6 @@ public class Kef_1Script : MonoBehaviour{
             Answer1Text.text = Choices[row_txt, column++].ToString();
             Answer2Text.text = Choices[row_txt, column++].ToString();
             Answer3Text.text = Choices[row_txt++, column].ToString(); column = 0;
-        } else if (line < Questions.Length) { //continue with Photo answers
-            PanelQuestion.text = Questions[line++].ToString();
-            Answer1btn.GetComponent<Image>().material = null; Answer1Text.text = "";
-            Answer2btn.GetComponent<Image>().material = null; Answer2Text.text = "";
-            Answer3btn.GetComponent<Image>().material = null; Answer3Text.text = "";
-            Answer1btn.image.sprite = imagesQ1[row_img];
-            Answer2btn.image.sprite = imagesQ2[row_img];
-            Answer3btn.image.sprite = imagesQ3[row_img++];
         }
         else {
             endKef = true;
