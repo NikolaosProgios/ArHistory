@@ -83,7 +83,7 @@ public class Kef_2Script : MonoBehaviour
             WelcomeImage.SetActive(false);
             GoodBye…mage.SetActive(true);
             StarKef2Game.SetActive(false);
-            EndKef2NextGame.SetActive(true);
+            //EndKef2NextGame.SetActive(true);
         }
         if (Welcome_Panel != null)
         {
