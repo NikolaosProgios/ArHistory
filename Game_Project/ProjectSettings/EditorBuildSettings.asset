@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/WelcomeScene.unity
     guid: 2b7e7743d79736d4a819fdb4253354bc
@@ -20,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kef_2.unity
     guid: 8b25419de1b427946bee756d88d23282
+  - enabled: 1
+    path: Assets/Scenes/Kef_3.unity
+    guid: 4fb43de3a251e9f419d73d8446de09b0
   m_configObjects: {}
