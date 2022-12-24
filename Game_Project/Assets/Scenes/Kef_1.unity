@@ -1350,37 +1350,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934558302}
   m_CullTransparentMesh: 1
---- !u!21 &1040454651
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'QR_code_ar_markerMaterial
-
-    25284'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 819fde04d09f4e9aa3f22e7c6112c296, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!43 &1152100182
 Mesh:
   m_ObjectHideFlags: 0
@@ -1670,7 +1639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u0395\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2 \u0395\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1\u03C2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1784,6 +1753,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!21 &1398149631
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'QR_code_ar_markerMaterial
+
+    33888'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 819fde04d09f4e9aa3f22e7c6112c296, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1413401272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,18 +1827,6 @@ MonoBehaviour:
   Answer1btn: {fileID: 1764949400}
   Answer2btn: {fileID: 1712106608}
   Answer3btn: {fileID: 774464408}
-  imagesQ1:
-  - {fileID: 21300000, guid: 114cdb045378f3442b73a87f0e81d8bf, type: 3}
-  - {fileID: 21300000, guid: 2293daaea2f1404468863f4136ec2750, type: 3}
-  - {fileID: 21300000, guid: 2121fb89f9ebda544a2819c4717d1b0c, type: 3}
-  imagesQ2:
-  - {fileID: 21300000, guid: f97264129737b7a4683c44ac4e0f13fe, type: 3}
-  - {fileID: 21300000, guid: b34dae3a3a8247c4db84345475ceb4d4, type: 3}
-  - {fileID: 21300000, guid: 65f0647661c4a6340b2c77c8b8d0498c, type: 3}
-  imagesQ3:
-  - {fileID: 21300000, guid: d6eb3edd908bf564da4dbe7b8555ad7b, type: 3}
-  - {fileID: 21300000, guid: 65f0647661c4a6340b2c77c8b8d0498c, type: 3}
-  - {fileID: 21300000, guid: 2293daaea2f1404468863f4136ec2750, type: 3}
 --- !u!4 &1413401274
 Transform:
   m_ObjectHideFlags: 0
@@ -2108,15 +2096,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73134959d93836b42afd2c0db1d09170, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8615
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73134959d93836b42afd2c0db1d09170, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.26489
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73134959d93836b42afd2c0db1d09170, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.48
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73134959d93836b42afd2c0db1d09170, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2695,8 +2683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.7, y: 0.08}
-  m_SizeDelta: {x: 27.92, y: 41.76}
+  m_AnchoredPosition: {x: -46.7, y: 0}
+  m_SizeDelta: {x: 28, y: 41.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764949400
 MonoBehaviour:
@@ -3067,8 +3055,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.155, y: 2.123}
-  m_SizeDelta: {x: 118.425, y: 45.977}
+  m_AnchoredPosition: {x: 0.155, y: 2.1}
+  m_SizeDelta: {x: 118.5, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990177053
 MonoBehaviour:
@@ -3314,7 +3302,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1040454651}
+  - {fileID: 1398149631}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

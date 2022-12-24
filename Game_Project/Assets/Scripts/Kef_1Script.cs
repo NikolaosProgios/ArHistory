@@ -75,8 +75,6 @@ public class Kef_1Script : MonoBehaviour{
     
     public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
 
-    public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
-
     private bool LoadQnA() {
         bool endKef = false;
         if (row_txt < Choices.GetLength(0)) {

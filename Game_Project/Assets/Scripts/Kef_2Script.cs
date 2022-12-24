@@ -6,8 +6,8 @@ using TMPro;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class Kef_2Script : MonoBehaviour
-{
+public class Kef_2Script : MonoBehaviour {
+	
     public GameObject Welcome_Panel, WelcomeImage, GoodByeΙmage,
             StarKef2Game, EndKef2NextGame;
     public TMP_Text TitlePanel;
@@ -31,27 +31,19 @@ public class Kef_2Script : MonoBehaviour
     };
     int[] correctAnswers = { 1, 2, 2, 1, 2, 2 };
 
-    void Start()
-    {
-        ShowHidePanel("Welcome");
-    }
+    void Start() => ShowHidePanel("Welcome");
 
-    public void Startof()
-    {
+    public void Startof() {
         ShowHidePanel("");
         LoadQnA();
     }
 
-    public async void PressedAnswer(int choice)
-    {
-        if (choice == correctAnswers[--line])
-        {
+    public async void PressedAnswer(int choice) {
+        if (choice == correctAnswers[--line]){
             correctAnsw++;
-        }
-        line++;
-        if (LoadQnA())
-        {
-            TableQuestion.text = "Τέλος 1ης Ενότητας."
+        } line++;
+        if (LoadQnA()) {
+            TableQuestion.text = "Τέλος 2ης Ενότητας."
                 + "\nΣωστες Απαντήσεις: " + correctAnsw
                 + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length - correctAnsw);
             AnswersCanvas.SetActive(false);
@@ -62,51 +54,40 @@ public class Kef_2Script : MonoBehaviour
 
     public void Piso() => SceneManager.LoadScene("MenuScene");
 
-    public void OpenKefN(int n)
-    {
-        SceneManager.LoadScene("Kef_" + n);
-    }
+    public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
 
-    private void ShowHidePanel(string ComeOrBye)
-    {
-        if (ComeOrBye == "Welcome")
-        {
+    private void ShowHidePanel(string ComeOrBye) { 
+        if (ComeOrBye == "Welcome") {
             TitlePanel.text = "Καλωσήρθες στην 2η Ενότητα του παιχνιδού μας";
             WelcomeImage.SetActive(true);
             GoodByeΙmage.SetActive(false);
             StarKef2Game.SetActive(true);
             EndKef2NextGame.SetActive(false);
         }
-        else if (ComeOrBye == "GoodBye")
-        {
+        else if (ComeOrBye == "GoodBye") {
             TitlePanel.text = "Ολοκλήρωσες την 2η Ενότητα του παιχνιδού μας";
             WelcomeImage.SetActive(false);
             GoodByeΙmage.SetActive(true);
             StarKef2Game.SetActive(false);
-            //EndKef2NextGame.SetActive(true);
+            EndKef2NextGame.SetActive(true);
         }
-        if (Welcome_Panel != null)
-        {
+        if (Welcome_Panel != null) {
             bool isActive = Welcome_Panel.activeSelf;
             Welcome_Panel.SetActive(!isActive);
         }
     }
 
-
     public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
 
-    private bool LoadQnA()
-    {
+    private bool LoadQnA() {
         bool endKef = false;
-        if (row_txt < Choices.GetLength(0))
-        {
+        if (row_txt < Choices.GetLength(0)) {
             TableQuestion.text = Questions[line++].ToString();
             Answer1Text.text = Choices[row_txt, column++].ToString();
             Answer2Text.text = Choices[row_txt, column++].ToString();
             Answer3Text.text = Choices[row_txt++, column].ToString(); column = 0;
         }
-        else if (line < Questions.Length)
-        { //continue with Photo answers
+        else if (line < Questions.Length) { //continue with Photo answers
             TableQuestion.text = Questions[line++].ToString();
             Answer1btn.GetComponent<Image>().material = null; Answer1Text.text = "";
             Answer2btn.GetComponent<Image>().material = null; Answer2Text.text = "";
@@ -115,8 +96,7 @@ public class Kef_2Script : MonoBehaviour
             Answer2btn.image.sprite = imagesQ2[row_img];
             Answer3btn.image.sprite = imagesQ3[row_img++];
         }
-        else
-        {
+        else {
             endKef = true;
         }
         return endKef;
