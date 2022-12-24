@@ -1090,7 +1090,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -1558,7 +1558,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934558302}
   m_CullTransparentMesh: 1
---- !u!21 &992369157
+--- !u!21 &1042034087
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1567,7 +1567,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'QR_code_ar_markerMaterial
 
-    35938'
+    35010'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -1691,8 +1691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5699458, y: 5.510111}
-  m_SizeDelta: {x: 11.8009, y: 3.7231}
+  m_AnchoredPosition: {x: -0.57, y: 5.5}
+  m_SizeDelta: {x: 12, y: 3.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242113284
 MonoBehaviour:
@@ -2001,7 +2001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2577,7 +2577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2973,11 +2973,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1642125840}
-  - {fileID: 1908750112}
+  - {fileID: 1421537925}
   - {fileID: 332760319}
+  - {fileID: 1908750112}
   - {fileID: 583929948}
   - {fileID: 1691903767}
-  - {fileID: 1421537925}
   m_Father: {fileID: 2105627597}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3113,7 +3113,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef03e2e87bb410143a68cac5140bd8f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -3469,7 +3469,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 992369157}
+  - {fileID: 1042034087}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

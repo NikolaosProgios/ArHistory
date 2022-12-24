@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -16,7 +14,7 @@ public class Kef_2Script : MonoBehaviour {
     public TMP_Text TableQuestion,
             Answer1Text, Answer2Text, Answer3Text;
     public Button Answer1btn, Answer2btn, Answer3btn;
-    int line, row_txt, column, row_img, correctAnsw;
+    int line, row_txt, column, row_img, correctAnswersCounter;
 
     string[] Questions = {
         "Για ποιους λόγους οι Σουλιώτες ήταν γνωστοί ως ικανότατοι πολεμιστές;",
@@ -29,7 +27,7 @@ public class Kef_2Script : MonoBehaviour {
                           { "2Anse1 ", "2Anse2 ", "2Anse3" },
                           { "3Anse1 ", "3Anse2 ", "3Anse3" }
     };
-    int[] correctAnswers = { 1, 2, 2, 1, 2, 2 };
+    int[] correctAnswers = {1, 2, 2, 1, 2, 2};
 
     void Start() => ShowHidePanel("Welcome");
 
@@ -40,12 +38,12 @@ public class Kef_2Script : MonoBehaviour {
 
     public async void PressedAnswer(int choice) {
         if (choice == correctAnswers[--line]){
-            correctAnsw++;
+            correctAnswersCounter++;
         } line++;
-        if (LoadQnA()) {
+        if (!LoadQnA()) {
             TableQuestion.text = "Τέλος 2ης Ενότητας."
-                + "\nΣωστες Απαντήσεις: " + correctAnsw
-                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length - correctAnsw);
+                + "\nΣωστες Απαντήσεις: " + correctAnswersCounter
+                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length - correctAnswersCounter);
             AnswersCanvas.SetActive(false);
             await Task.Delay(3000);
             ShowHidePanel("GoodBye");
@@ -80,7 +78,6 @@ public class Kef_2Script : MonoBehaviour {
     public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
 
     private bool LoadQnA() {
-        bool endKef = false;
         if (row_txt < Choices.GetLength(0)) {
             TableQuestion.text = Questions[line++].ToString();
             Answer1Text.text = Choices[row_txt, column++].ToString();
@@ -97,8 +94,8 @@ public class Kef_2Script : MonoBehaviour {
             Answer3btn.image.sprite = imagesQ3[row_img++];
         }
         else {
-            endKef = true;
+            return false;
         }
-        return endKef;
+        return true;
     }
 }
