@@ -35,7 +35,7 @@ public class Kef_1Script : MonoBehaviour {
     public void Piso() => SceneManager.LoadScene("MenuScene");
 
     public void StartOf(){
-        ShowHidePanel("Hide");
+        ShowHidePanel("");
         LoadQnA();
     }
     private void ShowHidePanel(string ComeOrBye) {
