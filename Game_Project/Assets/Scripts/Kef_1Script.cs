@@ -13,9 +13,10 @@ public class Kef_1Script : MonoBehaviour {
     public GameObject AnswersCanvas;
     public TMP_Text PanelQuestion,
             Answer1Text, Answer2Text, Answer3Text;
+
     public Button Answer1btn, Answer2btn, Answer3btn;
 
-    private int line, row_txt, column, row_img, correctAnswersCounter;
+    private int line, row_txt, column, correctAnswersCounter;
 
     string[] Questions = {
         "Ποιες ομοιότητες παρατηρείτε ανάμεσα στην Αμερικανική "+
