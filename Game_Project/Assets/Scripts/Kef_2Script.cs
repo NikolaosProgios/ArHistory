@@ -32,30 +32,16 @@ public class Kef_2Script : MonoBehaviour {
 
     public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
 
-    void Start() => ShowHidePanel("Welcome");
+    public void Start() => ShowHidePanel("Welcome");
+
+    public void Piso() => SceneManager.LoadScene("MenuScene");
+
+    public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
 
     public void Startof() {
         ShowHidePanel("");
         LoadQnA();
     }
-
-    public async void PressedAnswer(int choice) {
-        if (choice == correctAnswers[--line]){
-            correctAnswersCounter++;
-        } line++;
-        if (!LoadQnA()) {
-            TableQuestion.text = "Τέλος 2ης Ενότητας."
-                + "\nΣωστες Απαντήσεις: " + correctAnswersCounter
-                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length - correctAnswersCounter);
-            AnswersCanvas.SetActive(false);
-            await Task.Delay(3000);
-            ShowHidePanel("GoodBye");
-        }
-    }
-
-    public void Piso() => SceneManager.LoadScene("MenuScene");
-
-    public void OpenKefN(int n) => SceneManager.LoadScene("Kef_" + n);
 
     private void ShowHidePanel(string ComeOrBye) {
         if (Welcome_Panel != null) {
@@ -98,5 +84,19 @@ public class Kef_2Script : MonoBehaviour {
             return false;
         }
         return true;
+    }
+
+    public async void PressedAnswer(int choice) {
+        if (choice == correctAnswers[--line]){
+            correctAnswersCounter++;
+        } line++;
+        if (!LoadQnA()) {
+            TableQuestion.text = "Τέλος 2ης Ενότητας."
+                + "\nΣωστες Απαντήσεις: " + correctAnswersCounter
+                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length - correctAnswersCounter);
+            AnswersCanvas.SetActive(false);
+            await Task.Delay(3000);
+            ShowHidePanel("GoodBye");
+        }
     }
 }

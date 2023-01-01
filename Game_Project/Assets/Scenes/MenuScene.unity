@@ -1232,8 +1232,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0395\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1 \u0395\n\n\u0397 \u03B5\u03BB\u03BB\u03AC\u03B4\u03B1
-    \u03C3\u03C4\u03BF\u03BD 20\u03BF \u03B1\u03B9\u03CE\u03BD\u03B1"
+  m_text: "\u0395\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1 \u0395\n\n\u0397 \u0395\u03BB\u03BB\u03AC\u03B4\u03B1
+    \n\u03C3\u03C4\u03BF\u03BD 20\u03BF \u03B1\u03B9\u03CE\u03BD\u03B1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1781,7 +1781,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u0395\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1 \u0394 \n\n\u0397 \u0395\u03BB\u03BB\u03AC\u03B4\u03B1
-    \u03C3\u03C4\u03BF\u03BD 19\u03BF \u03B1\u03B9\u03CE\u03BD\u03B1"
+    \n\u03C3\u03C4\u03BF\u03BD 19\u03BF \u03B1\u03B9\u03CE\u03BD\u03B1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2236,7 +2236,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u0395\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1 \u0393\n\n\u0397 \u039C\u03B5\u03B3\u03AC\u03BB\u03B7
-    \u0395\u03C0\u03AC\u03BD\u03B1\u03C3\u03C4\u03B7\n(1821-1830)"
+    \u0395\u03C0\u03B1\u03BD\u03AC\u03C3\u03C4\u03B1\u03C3\u03B7\n(1821-1830)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2325,7 +2325,7 @@ GameObject:
   - component: {fileID: 2083239981}
   - component: {fileID: 2083239980}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Back_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
