@@ -3,7 +3,12 @@ guid: 26dbe23cb560b894080aa3fc83d1a6ca
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wrapCoverMaterial
+    second: {fileID: 2100000, guid: 486f283daf596d4459ee0a94e29979c4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
