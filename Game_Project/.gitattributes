@@ -6,6 +6,11 @@
 *.asset -text -merge=unityamlmerge
 *.prefab -text -merge=unityamlmerge
 
+# Blender files
+*.blend -text -merge=unityamlmerge
+*.blend1 -text -merge=unityamlmerge
+*.fbx -text -merge=unityamlmerge
+
 # Image formats
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
