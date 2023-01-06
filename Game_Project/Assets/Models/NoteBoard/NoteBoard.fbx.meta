@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CorkBase
+      name: CorkPanel
     second: {fileID: 2100000, guid: 6d5109edb5ebcbc4d802011063069c3d, type: 2}
   - first:
       type: UnityEngine:Material
