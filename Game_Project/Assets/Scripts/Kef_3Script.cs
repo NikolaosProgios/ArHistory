@@ -28,7 +28,7 @@ public class Kef_3Script : MonoBehaviour {
                           { "2Anse1 ", "2Anse2 ", "2Anse3" },
                           { "3Anse1 ", "3Anse2 ", "3Anse3" }
     };
-    int[] correctAnswers = { 1, 2, 2, 1, 2, 2 };
+    int[] correctAnswers = { 1, 2, 2, 1, 2, 2};
 
     void Start() => ShowHidePanel("Welcome");
 
@@ -38,9 +38,7 @@ public class Kef_3Script : MonoBehaviour {
     }
 
     public async void PressedAnswer(int choice) {
-        if (choice == correctAnswers[--line]) {
-            correctAnswersCounter++;
-        } line++;
+        CorrectOrWrongChoice(choice);
         if (!LoadQnA()) {
             TableQuestion.text = "Τέλος 3ης Ενότητας."
                 + "\nΣωστες Απαντήσεις: " + correctAnswersCounter
@@ -50,6 +48,28 @@ public class Kef_3Script : MonoBehaviour {
             ShowHidePanel("GoodBye");
         }
     }
+
+    private async void CorrectOrWrongChoice (int choice) {
+        if (choice == correctAnswers[--line]) {
+
+            //ColorBlock cb = Answer1btn.colors;
+            //cb.pressedColor = Color.red;
+            //Answer1btn.colors = cb;
+
+            correctAnswersCounter++;
+            Answer1btn.GetComponent<Image>().color = Color.green;
+            await Task.Delay(500);
+            Answer1btn.GetComponent<Image>().color = Color.white;
+        }
+        else{
+            Answer1btn.GetComponent<Image>().color = Color.red;
+            await Task.Delay(500);
+            Answer1btn.GetComponent<Image>().color = Color.white;
+
+        }
+        line++;
+    }
+
 
     public void Piso() => SceneManager.LoadScene("MenuScene");
 
