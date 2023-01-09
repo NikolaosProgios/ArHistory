@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kef_3.unity
     guid: 4fb43de3a251e9f419d73d8446de09b0
+  - enabled: 1
+    path: Assets/Scenes/Kef_4.unity
+    guid: 1f50687bf71f44144b8752cdfcf493c8
   m_configObjects: {}

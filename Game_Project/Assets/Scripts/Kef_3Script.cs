@@ -20,10 +20,10 @@ public class Kef_3Script : MonoBehaviour {
 
     string[] Questions = {
         "Ποιες ήταν οι περιοχές που συμπεριλαμβάνονταν στο πρώτο ανεξάρτητο " +
-            "ελληνικό κράτος; Θα σας βοηθήσει και ο χάρτης.",
-        "Ποιος ήταν ο χαρακτήρας της ελληνικής Επανάστασης σύμφωνα με τον Κολοκοτρώνη; (Πηγή 1)",
-        "Ερώτηση 3η",
-        "Photo Answers1","Photo Answers2","Photo Answers3",
+            "ελληνικό κράτος; Θα σας βοηθήσει και ο χάρτης."
+        ,"Ποιος ήταν ο χαρακτήρας της ελληνικής Επανάστασης σύμφωνα με τον Κολοκοτρώνη; (Πηγή 1)"
+        ,"Ερώτηση 3η"
+        ,"Photo Answers1","Photo Answers2","Photo Answers3"
     };
     string[,] Choices = { { "1Anse1 ", "1Anse2 ", "1Anse3" },
                           { "2Anse1 ", "2Anse2 ", "2Anse3" },
@@ -57,24 +57,25 @@ public class Kef_3Script : MonoBehaviour {
     }  
     
     private void ShowHidePanel(string ComeOrBye) {
-        if (ComeOrBye == "Welcome") {
-            TitlePanel.text = "Καλωσήρθες στην 3η Ενότητα του παιχνιδού μας";
-            WelcomeImage.SetActive(true);
-            GoodByeΙmage.SetActive(false);
-            StarKef3Game.SetActive(true);
-            EndKef3NextGame.SetActive(false);
-        }
-        else if (ComeOrBye == "GoodBye") {
-            TitlePanel.text = "Ολοκλήρωσες την 3η Ενότητα του παιχνιδού μας";
-            WelcomeImage.SetActive(false);
-            GoodByeΙmage.SetActive(true);
-            StarKef3Game.SetActive(false);
-            //EndKef3NextGame.SetActive(true);
-        }
         if (Welcome_Panel != null) {
             bool isActive = Welcome_Panel.activeSelf;
             Welcome_Panel.SetActive(!isActive);
         }
+        if (ComeOrBye == "Welcome") {
+            TitlePanel.text = "Καλωσήρθες στην 3η Ενότητα του παιχνιδού μας";
+            switchWelcomeGoodByePanel(true);  
+        }
+        else if (ComeOrBye == "GoodBye") {
+            TitlePanel.text = "Ολοκλήρωσες την 3η Ενότητα του παιχνιδού μας";
+            switchWelcomeGoodByePanel(false);
+        }
+    }
+
+    private void switchWelcomeGoodByePanel(bool boolean){
+        WelcomeImage.SetActive(boolean);
+        GoodByeΙmage.SetActive(!boolean);
+        StarKef3Game.SetActive(boolean);
+        EndKef3NextGame.SetActive(!boolean);
     }
 
     private bool LoadQnA(){

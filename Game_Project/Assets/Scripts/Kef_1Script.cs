@@ -40,6 +40,7 @@ public class Kef_1Script : MonoBehaviour {
         ShowHidePanel("");
         LoadQnA();
     }
+
     public async void PressedAnswer(int choice) {
         CorrectOrWrongChoice(choice);
         if (!LoadQnA()) {
@@ -60,17 +61,19 @@ public class Kef_1Script : MonoBehaviour {
         }
         if (ComeOrBye== "Welcome") {
             TitlePanel.text = "Καλωσήρθες στην 1η Ενότητα του παιχνιδού μας";
-            WelcomeImage.SetActive(true);
-            GoodByeΙmage.SetActive(false);
-            StarKef1Game.SetActive(true);
-            EndKef1NextGame.SetActive(false);
-        }else if (ComeOrBye == "GoodBye") {
-            TitlePanel.text = "Ολοκλήρωσες την 1η Ενότητα του παιχνιδού μας";
-            WelcomeImage.SetActive(false);
-            GoodByeΙmage.SetActive(true);
-            StarKef1Game.SetActive(false);
-            EndKef1NextGame.SetActive(true);
+            switchWelcomeGoodByePanel(true);
         }
+        else if (ComeOrBye == "GoodBye") {
+            TitlePanel.text = "Ολοκλήρωσες την 1η Ενότητα του παιχνιδού μας";
+            switchWelcomeGoodByePanel(false);
+        }
+    }
+
+    private void switchWelcomeGoodByePanel(bool boolean) {
+        WelcomeImage.SetActive(boolean);
+        GoodByeΙmage.SetActive(!boolean);
+        StarKef1Game.SetActive(boolean);
+        EndKef1NextGame.SetActive(!boolean);
     }
 
     private bool LoadQnA() {

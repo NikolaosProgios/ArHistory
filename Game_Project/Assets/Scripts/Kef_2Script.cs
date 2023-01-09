@@ -62,18 +62,19 @@ public class Kef_2Script : MonoBehaviour {
         }
         if (ComeOrBye == "Welcome") {
             TitlePanel.text = "Καλωσήρθες στην 2η Ενότητα του παιχνιδού μας";
-            WelcomeImage.SetActive(true);
-            GoodByeΙmage.SetActive(false);
-            StarKef2Game.SetActive(true);
-            EndKef2NextGame.SetActive(false);
+            switchWelcomeGoodByePanel(true);
         }
         else if (ComeOrBye == "GoodBye") {
             TitlePanel.text = "Ολοκλήρωσες την 2η Ενότητα του παιχνιδού μας";
-            WelcomeImage.SetActive(false);
-            GoodByeΙmage.SetActive(true);
-            StarKef2Game.SetActive(false);
-            EndKef2NextGame.SetActive(true);
+            switchWelcomeGoodByePanel(false);
         }
+    }
+
+    private void switchWelcomeGoodByePanel(bool boolean) {
+        WelcomeImage.SetActive(boolean);
+        GoodByeΙmage.SetActive(!boolean);
+        StarKef2Game.SetActive(boolean);
+        EndKef2NextGame.SetActive(!boolean);
     }
 
     private bool LoadQnA() {
