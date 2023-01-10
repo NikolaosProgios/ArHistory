@@ -7,8 +7,8 @@ using System.Collections.Generic;
 
 public class Kef_3Script : MonoBehaviour {
 
-    public GameObject Welcome_Panel, WelcomeImage, GoodByeΙmage,
-        StarKef3Game, EndKef3NextGame;
+    public GameObject Welcome_Panel, WelcomeImage, GoodByeΞ™mage,
+            StarKef3Game, EndKef3NextGame;
     public TMP_Text TitlePanel;
 
     public GameObject AnswersCanvas;    
@@ -19,16 +19,17 @@ public class Kef_3Script : MonoBehaviour {
     int line, row_txt, column, row_img, correctAnswersCounter;
 
     string[] Questions = {
-        "Ποιες ήταν οι περιοχές που συμπεριλαμβάνονταν στο πρώτο ανεξάρτητο " +
-            "ελληνικό κράτος; Θα σας βοηθήσει και ο χάρτης."
-        ,"Ποιος ήταν ο χαρακτήρας της ελληνικής Επανάστασης σύμφωνα με τον Κολοκοτρώνη; (Πηγή 1)"
-        ,"Ερώτηση 3η"
+        "Ξ ΞΏΞΉΞµΟ‚ Ξ®Ο„Ξ±Ξ½ ΞΏΞΉ Ο€ΞµΟΞΉΞΏΟ‡Ξ­Ο‚ Ο€ΞΏΟ… ΟƒΟ…ΞΌΟ€ΞµΟΞΉΞ»Ξ±ΞΌΞ²Ξ¬Ξ½ΞΏΞ½Ο„Ξ±Ξ½ ΟƒΟ„ΞΏ Ο€ΟΟΟ„ΞΏ Ξ±Ξ½ΞµΞΎΞ¬ΟΟ„Ξ·Ο„ΞΏ " +
+            "ΞµΞ»Ξ»Ξ·Ξ½ΞΉΞΊΟ ΞΊΟΞ¬Ο„ΞΏΟ‚; ΞΞ± ΟƒΞ±Ο‚ Ξ²ΞΏΞ·ΞΈΞ®ΟƒΞµΞΉ ΞΊΞ±ΞΉ ΞΏ Ο‡Ξ¬ΟΟ„Ξ·Ο‚."
+        ,"Ξ ΞΏΞΉΞΏΟ‚ Ξ®Ο„Ξ±Ξ½ ΞΏ Ο‡Ξ±ΟΞ±ΞΊΟ„Ξ®ΟΞ±Ο‚ Ο„Ξ·Ο‚ ΞµΞ»Ξ»Ξ·Ξ½ΞΉΞΊΞ®Ο‚ Ξ•Ο€Ξ±Ξ½Ξ¬ΟƒΟ„Ξ±ΟƒΞ·Ο‚ ΟƒΟΞΌΟ†Ο‰Ξ½Ξ± ΞΌΞµ Ο„ΞΏΞ½ ΞΞΏΞ»ΞΏΞΊΞΏΟ„ΟΟΞ½Ξ·; (Ξ Ξ·Ξ³Ξ® 1)"
+        ,"Ξ•ΟΟΟ„Ξ·ΟƒΞ· 3Ξ·"
         ,"Photo Answers1","Photo Answers2","Photo Answers3"
     };
     string[,] Choices = { { "1Anse1 ", "1Anse2 ", "1Anse3" },
                           { "2Anse1 ", "2Anse2 ", "2Anse3" },
                           { "3Anse1 ", "3Anse2 ", "3Anse3" }
     };
+    
     public Sprite[] imagesQ1, imagesQ2, imagesQ3 = new Sprite[3];
     int[] correctAnswers = { 0, 1, 1, 0, 1, 1 };
 
@@ -48,9 +49,9 @@ public class Kef_3Script : MonoBehaviour {
         if (!LoadQnA()) {
             await Task.Delay(300);
             AnswersCanvas.SetActive(false);
-            TableQuestion.text = "Τέλος 3ης Ενότητας."
-                + "\nΣωστες Απαντήσεις: " + correctAnswersCounter
-                + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length - correctAnswersCounter);            
+            TableQuestion.text = "Ξ¤Ξ­Ξ»ΞΏΟ‚ 3Ξ·Ο‚ Ξ•Ξ½ΟΟ„Ξ·Ο„Ξ±Ο‚."
+                + "\nΞ£Ο‰ΟƒΟ„ΞµΟ‚ Ξ‘Ο€Ξ±Ξ½Ο„Ξ®ΟƒΞµΞΉΟ‚: " + correctAnswersCounter
+                + "\nΞ›Ξ±Ξ½ΞΈΞ±ΟƒΞΌΞ­Ξ½ΞµΟ‚ Ξ‘Ο€Ξ±Ξ½Ο„Ξ®ΟƒΞµΞΉΟ‚: " + (Questions.Length - correctAnswersCounter);            
             await Task.Delay(2700);
             ShowHidePanel("GoodBye");
         }
@@ -62,34 +63,33 @@ public class Kef_3Script : MonoBehaviour {
             Welcome_Panel.SetActive(!isActive);
         }
         if (ComeOrBye == "Welcome") {
-            TitlePanel.text = "Καλωσήρθες στην 3η Ενότητα του παιχνιδού μας";
+            TitlePanel.text = "ΞΞ±Ξ»Ο‰ΟƒΞ®ΟΞΈΞµΟ‚ ΟƒΟ„Ξ·Ξ½ 3Ξ· Ξ•Ξ½ΟΟ„Ξ·Ο„Ξ± Ο„ΞΏΟ… Ο€Ξ±ΞΉΟ‡Ξ½ΞΉΞ΄ΞΏΟ ΞΌΞ±Ο‚";
             switchWelcomeGoodByePanel(true);  
         }
         else if (ComeOrBye == "GoodBye") {
-            TitlePanel.text = "Ολοκλήρωσες την 3η Ενότητα του παιχνιδού μας";
+            TitlePanel.text = "ΞΞ»ΞΏΞΊΞ»Ξ®ΟΟ‰ΟƒΞµΟ‚ Ο„Ξ·Ξ½ 3Ξ· Ξ•Ξ½ΟΟ„Ξ·Ο„Ξ± Ο„ΞΏΟ… Ο€Ξ±ΞΉΟ‡Ξ½ΞΉΞ΄ΞΏΟ ΞΌΞ±Ο‚";
             switchWelcomeGoodByePanel(false);
         }
     }
 
-    private void switchWelcomeGoodByePanel(bool boolean){
+    private void switchWelcomeGoodByePanel(bool boolean) {
         WelcomeImage.SetActive(boolean);
-        GoodByeΙmage.SetActive(!boolean);
+        GoodByeΞ™mage.SetActive(!boolean);
         StarKef3Game.SetActive(boolean);
         EndKef3NextGame.SetActive(!boolean);
     }
 
     private bool LoadQnA(){
         if (row_txt < Choices.GetLength(0)) {
-            TableQuestion.text = Questions[line++].ToString();
-            AnswersText[0].text = Choices[row_txt, column++].ToString();
-            AnswersText[1].text = Choices[row_txt, column++].ToString();
-            AnswersText[2].text = Choices[row_txt++, column].ToString(); column = 0;
+            TableQuestion.text = Questions[line++].ToString();            
+            AnswersText.ForEach(answersText => answersText.text = Choices[row_txt, column++].ToString());
+            column = 0; row_txt++;
         }
         else if (line < Questions.Length) { //continue with Photo answers
             TableQuestion.text = Questions[line++].ToString();
-            AnswersBtn[0].GetComponent<Image>().material = null; AnswersText[0].text = "";
-            AnswersBtn[1].GetComponent<Image>().material = null; AnswersText[1].text = "";
-            AnswersBtn[2].GetComponent<Image>().material = null; AnswersText[2].text = "";
+            AnswersBtn.ForEach(answerBtn => answerBtn.GetComponent<Image>().material = null);
+            AnswersText.ForEach(answerText => answerText.text = "");
+
             AnswersBtn[0].image.sprite = imagesQ1[row_img];
             AnswersBtn[1].image.sprite = imagesQ2[row_img];
             AnswersBtn[2].image.sprite = imagesQ3[row_img++];
@@ -100,12 +100,12 @@ public class Kef_3Script : MonoBehaviour {
         return true;
     }
 
-    private async void CorrectOrWrongChoice (int choice) {
+    private async void CorrectOrWrongChoice(int choice) {
         if (choice == correctAnswers[--line]) {
             correctAnswersCounter++;          
             AnswersBtn[choice].GetComponent<Image>().color = Color.green;
         }
-        else{            
+        else {            
             AnswersBtn[choice].GetComponent<Image>().color = Color.red;
         }
         line++;

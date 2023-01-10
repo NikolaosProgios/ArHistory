@@ -12,7 +12,7 @@ public class Kef_1Script : MonoBehaviour {
     public TMP_Text TitlePanel;
 
     public GameObject AnswersCanvas;
-    public TMP_Text PanelQuestion;
+    public TMP_Text TableQuestion;
     public List<TMP_Text> AnswersText = new List<TMP_Text>();
 
     private int line, row_txt, column, correctAnswersCounter;
@@ -46,7 +46,7 @@ public class Kef_1Script : MonoBehaviour {
         if (!LoadQnA()) {
             await Task.Delay(300);
             AnswersCanvas.SetActive(false);
-            PanelQuestion.text = "Τέλος 1ης Ενότητας."
+            TableQuestion.text = "Τέλος 1ης Ενότητας."
                 + "\nΣωστες Απαντήσεις: " + correctAnswersCounter
                 + "\nΛανθασμένες Απαντήσεις: " + (Questions.Length-correctAnswersCounter);
             await Task.Delay(2700);
@@ -78,10 +78,9 @@ public class Kef_1Script : MonoBehaviour {
 
     private bool LoadQnA() {
         if (row_txt < Choices.GetLength(0)) {
-            PanelQuestion.text = Questions[line++].ToString();
-            AnswersText[0].text = Choices[row_txt, column++].ToString();
-            AnswersText[1].text = Choices[row_txt, column++].ToString();
-            AnswersText[2].text = Choices[row_txt++, column].ToString(); column = 0;
+            TableQuestion.text = Questions[line++].ToString();
+            AnswersText.ForEach(answersText => answersText.text = Choices[row_txt, column++].ToString());
+            column = 0; row_txt++;
         }
         else {
             return false;

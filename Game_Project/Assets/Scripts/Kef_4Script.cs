@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class Kef_4Script : MonoBehaviour {
 
     public GameObject Welcome_Panel, WelcomeImage, GoodBye…mage,
-        StarKef4Game, EndKef4NextGame;
+          StarKef4Game, EndKef4NextGame;
     public TMP_Text TitlePanel;
 
     public GameObject AnswersCanvas;
@@ -75,21 +75,19 @@ public class Kef_4Script : MonoBehaviour {
         WelcomeImage.SetActive(boolean);
         GoodBye…mage.SetActive(!boolean);
         StarKef4Game.SetActive(boolean);
-        EndKef4NextGame.SetActive(!boolean);
+        EndKef4NextGame.SetActive(false);
     }
 
     private bool LoadQnA() {
         if (row_txt < Choices.GetLength(0)) {
             TableQuestion.text = Questions[line++].ToString();
-            AnswersText[0].text = Choices[row_txt, column++].ToString();
-            AnswersText[1].text = Choices[row_txt, column++].ToString();
-            AnswersText[2].text = Choices[row_txt++, column].ToString(); column = 0;
+            AnswersText.ForEach(answersText => answersText.text = Choices[row_txt, column++].ToString());
+            column = 0; row_txt++;
         }
         else if (line < Questions.Length) { //continue with Photo answers
             TableQuestion.text = Questions[line++].ToString();
-            AnswersBtn[0].GetComponent<Image>().material = null; AnswersText[0].text = "";
-            AnswersBtn[1].GetComponent<Image>().material = null; AnswersText[1].text = "";
-            AnswersBtn[2].GetComponent<Image>().material = null; AnswersText[2].text = "";
+            AnswersBtn.ForEach(answerBtn => answerBtn.GetComponent<Image>().material = null);
+            AnswersText.ForEach(answerText => answerText.text = "");
             AnswersBtn[0].image.sprite = imagesQ1[row_img];
             AnswersBtn[1].image.sprite = imagesQ2[row_img];
             AnswersBtn[2].image.sprite = imagesQ3[row_img++];
